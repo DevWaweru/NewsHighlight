@@ -23,8 +23,8 @@ def get_sources(category):
 
         sources_results = None
 
-        if get_sources_response['results']:
-            sources_results_list = get_sources_response['results']
+        if get_sources_response['sources']:
+            sources_results_list = get_sources_response['sources']
             sources_results = process_results(sources_results_list)
     
     return sources_results
