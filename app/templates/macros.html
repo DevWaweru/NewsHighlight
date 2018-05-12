@@ -1,0 +1,7 @@
+{% macro sourceCategories(categories) %}
+    {% for category in categories %}
+        <div class="col-md-3">
+            <h3> {{category.name}} </h3>
+        </div>
+    {% endfor %}
+{% endmacro %}
