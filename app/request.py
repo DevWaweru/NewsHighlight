@@ -7,7 +7,9 @@ sources_url = None
 def configure_request(app):
     global api_key, sources_url
     api_key = app.config['NEWS_API_KEY']
+    # api_key = app.config['NEWS_API_KEY']
     sources_url = app.config['SOURCES_BASE_URL']
+
 
 def get_sources(category):
     '''
@@ -29,4 +31,20 @@ def process_results(sources_list):
     '''
     Function that processes the json results
     '''
-    pass
+    sources_results = []
+
+    for source in sources_list:
+        id = source.get('id')
+        name = source.get('name')
+        description = source.get('description')
+        url = source.get('url')
+        category = source.get('category')
+        country = source.get('country')
+
+        if url:
+            source_object = Sources(id,name,description,url,category,country)
+            sources_results.append(source_object)
+    
+    return sources_results
+
+
