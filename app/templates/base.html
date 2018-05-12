@@ -1,1 +1,8 @@
 {% extends 'bootstrap/base.html'%}
+
+<!-- Styles Block -->
+{% block styles %} 
+{{ super() }}
+<link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
+<link href="{{url_for('static',filename='css/styles.css')}}" rel="stylesheet"> 
+{% endblock %} 

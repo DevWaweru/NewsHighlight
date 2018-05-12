@@ -1,15 +1,10 @@
-{% extends 'base.html'%}
+{% extends 'base.html'%} 
 {% import 'macros.html' as macro %}
-
-{% block styles %}
-{{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-{% endblock%}
 
 {% block content%}
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 heading">
             <h1>News Highlights</h1>
         </div>
     </div>
