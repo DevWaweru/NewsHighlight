@@ -3,13 +3,13 @@ from .models import Sources,Articles
 
 api_key = None
 sources_url = None
+articles_url = None
 
 def configure_request(app):
-    global api_key, sources_url
+    global api_key, sources_url, articles_url
     api_key = app.config['NEWS_API_KEY']
-    # api_key = app.config['NEWS_API_KEY']
     sources_url = app.config['SOURCES_BASE_URL']
-    articles_per_source_url = app.config['EVERYTHING_LOCATION_BASE_URL']
+    articles_url = app.config['EVERYTHING_SOURCE_BASE_URL']
 
 
 def get_sources(category):
@@ -49,11 +49,11 @@ def process_results(sources_list):
     
     return sources_results
 
-def get_articles(id):
+def get_articles(source_id):
     '''
     Function that gets articles based on the source id
     '''
-    get_article_location_url = articles_per_source_url.format(id,api_key)
+    get_article_location_url = articles_url.format(source_id,api_key)
 
     with urllib.request.urlopen(get_article_location_url) as url:
         articles_location_data = url.read()

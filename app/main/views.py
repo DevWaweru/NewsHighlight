@@ -1,7 +1,7 @@
 from flask import render_template,redirect,url_for
 from . import main
 from ..models import Sources
-from ..request import get_sources
+from ..request import get_sources, get_articles
 
 @main.route('/')
 def index():
@@ -27,4 +27,8 @@ def articles(source_id):
     '''
     Function that returns articles based on their sources
     '''
+    # print(source_id)
+    news_source = get_articles(source_id)
+    title = f'{source_id} | All articles'
     
+    return render_template('articles.html', title = title, news = news_source)
