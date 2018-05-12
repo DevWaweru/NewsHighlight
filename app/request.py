@@ -46,5 +46,3 @@ def process_results(sources_list):
             sources_results.append(source_object)
     
     return sources_results
-
-
