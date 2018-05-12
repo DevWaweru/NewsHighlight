@@ -21,3 +21,4 @@ def index():
     title = 'Home | Best News Update Site'
     
     return render_template('index.html',title=title, general=cat_general, business = cat_business, entertainment = cat_entertainment, sports = cat_sports, tech = cat_tech, science = cat_science, health = cat_health)
+
