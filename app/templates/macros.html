@@ -1,11 +1,17 @@
 {% macro sourceCategories(categories) %} 
 {% for category in categories %}
-<div class="col-md-3">
-    <h3> {{category.name}} </h3>
-    <p> {{category.description}}
-        <br>
-        <a href="/articles/{{category.id}}">Read Articles</a>
-    </p>
+<div class="col-md-5 single-source">
+    <div class="row">
+        <div class="col-md-4 source-name">
+            <h3> {{category.name}} </h3>
+        </div>
+        <div class="col-md-7 source-details">
+            <p> {{category.description|truncate(150)}}
+                <br>
+                <a href="/articles/{{category.id}}">Read Articles</a>
+            </p>            
+        </div>
+    </div>
 </div>
 {% endfor %} 
 {% endmacro %}

@@ -1,10 +1,34 @@
-.heading{
+.heading {
     text-align: center;
     font-family: 'Allura';
 }
-h1{
+
+h1 {
     font-size: 70px;
 }
-.categories h2{
+
+.categories {
     text-align: center;
+}
+
+.single-source {
+    box-shadow: 2px 4px 12px 2px #DCDCDC;
+    margin: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.source-name {
+    text-align: right;
+}
+
+p,
+h1,
+h2,
+h3 {
+    word-wrap: break-word;
+}
+
+.source-details {
+    border-left: 1px solid rgba(88, 88, 88, 0.548)
 }
