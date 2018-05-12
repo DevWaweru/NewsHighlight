@@ -1,5 +1,11 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock%}
+
 {% block content%}
 <div class="container">
     <div class="row">
@@ -8,11 +14,53 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 categories">
             <h2>General News</h2>
             <hr>
         </div>
         {{macro.sourceCategories(general)}}
+    </div>
+    <div class="row">
+        <div class="col-md-12 categories">
+            <h2>Business News</h2>
+            <hr>
+        </div>
+        {{macro.sourceCategories(business)}}
+    </div>
+    <div class="row">
+        <div class="col-md-12 categories">
+            <h2>Entertainment News</h2>
+            <hr>
+        </div>
+        {{macro.sourceCategories(entertainment)}}
+    </div>
+    <div class="row">
+        <div class="col-md-12 categories">
+            <h2>Technology News</h2>
+            <hr>
+        </div>
+        {{macro.sourceCategories(tech)}}
+    </div>
+    <div class="row">
+        <div class="col-md-12 categories">
+            <h2>Science News</h2>
+            <hr>
+        </div>
+        {{macro.sourceCategories(science)}}
+    </div>
+    <div class="row">
+        <div class="col-md-12 categories">
+            <h2>Sports News</h2>
+            <hr>
+        </div>
+        {{macro.sourceCategories(sports)}}
+    </div>
+    <div class="row">
+        <div class="col-md-12 categories">
+            <h2>Health News</h2>
+            <hr>
+        </div>
+        {{macro.sourceCategories(health)}}
     </div>
 </div>
 {% endblock%}
