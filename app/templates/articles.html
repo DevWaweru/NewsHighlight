@@ -8,9 +8,10 @@
                 <img src={{article.urlToImage}} alt="IMAGE LOADING...">
                 <div class="words">
                     <h4 class="text-bold"> {{article.title}} </h4>
-                    <p class="small"> - {{article.author}}  {{article.publishedAt}} </p>
+                    <p class="small">- {{article.author}} </p>
+                    <p class="small">Posted on {{article.publishedAt}}</p>
                     <hr>
-                    <p> {{article.description}} ..<a href={{article.url}} target="_blank">Read More</a> </p>                    
+                    <p> {{article.description}}...<a href={{article.url}} target="_blank">Read More</a> </p>                    
                 </div>
             </div>
         {% endfor %}

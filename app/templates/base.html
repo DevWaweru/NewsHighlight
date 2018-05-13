@@ -9,3 +9,15 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
 <link href="{{url_for('static',filename='css/styles.css')}}" rel="stylesheet"> 
 {% endblock %} 
+
+{% block navbar %}
+    {% include 'navbar.html'%}
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+<script src="{{url_for('static',filename='js/jquery.js')}}"></script>
+<script src="{{url_for('static',filename='js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/jquery.easing.js')}}"></script>
+<script src="{{url_for('static',filename='js/script.js')}}"></script>
+{% endblock %}

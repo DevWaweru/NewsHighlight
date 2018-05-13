@@ -1,3 +1,53 @@
+#navMain {
+    font-family: 'Julius Sans One';
+    font-size: 100%;
+    text-transform: uppercase;
+}
+
+#navMain .navbar-toggler {
+    font-size: 14px;
+    padding: 11px;
+    color: rgba(230, 130, 16, 0.973);
+}
+
+#navMain a {
+    color: rgba(230, 130, 16, 0.973);
+    text-decoration: none;
+}
+
+#navMain .navbar-nav .nav-item:active,
+#navMain .navbar-nav .nav-item:focus {
+    outline: none;
+    background-color: transparent;
+}
+
+@media (min-width: 992px) {
+    #navMain {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        -webkit-transition: padding-top 0.5s ease-in-out, padding-bottom 0.5s;
+        -moz-transition: padding-top 0.5s ease-in-out, padding-bottom 0.5s;
+        transition: padding-top 0.5s ease-in-out, padding-bottom 0.5s;
+        letter-spacing: 1px;
+        background: transparent;
+    }
+    #navMain .nav-link.active {
+        outline: none;
+        background-color: rgba(26, 25, 24, 0.699);
+    }
+    #navMain .nav-link.active:hover {
+        color: white;
+    }
+    #navMain.navbar-shrink {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: black;
+        border-bottom: 1px solid red;
+    }
+    #navMain.navbar-shrink a{
+        color: rgba(230, 130, 16, 0.973);
+    }
+}
 .heading {
     text-align: center;
     font-family: 'Allura';
@@ -5,6 +55,7 @@
 
 h1 {
     font-size: 70px;
+    word-wrap: break-word;
 }
 
 .categories {
@@ -25,15 +76,13 @@ h1 {
 
 h2,
 h3,{
-    font-family: 'Julius Sans One'
+    font-family: 'Julius Sans One';
+    word-wrap: break-word;
 }
 h4{
-    font-family: 'Josefin Sans'
+    font-family: 'Josefin Sans';
 }
-p,
-h1,
-h2,
-h3 {
+p{
     word-wrap: break-word;
 }
 
@@ -68,4 +117,7 @@ img:hover {
 .row {
     display: flex;
     justify-content: center;
+}
+.small{
+    margin-bottom: 0
 }
