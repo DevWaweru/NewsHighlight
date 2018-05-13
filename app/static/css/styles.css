@@ -13,15 +13,23 @@ h1 {
 
 .single-source {
     box-shadow: 2px 4px 12px 2px #DCDCDC;
-    margin: 2rem;
+    margin: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    border-radius: 8px;
 }
 
 .source-name {
     text-align: right;
 }
 
+h2,
+h3,{
+    font-family: 'Julius Sans One'
+}
+h4{
+    font-family: 'Josefin Sans'
+}
 p,
 h1,
 h2,
@@ -31,4 +39,33 @@ h3 {
 
 .source-details {
     border-left: 1px solid rgba(88, 88, 88, 0.548)
+}
+
+.articles-details img {
+    max-width: 100%;
+}
+
+.articles-details {
+    box-shadow: 2px 4px 12px 2px #DCDCDC;
+    margin: 1rem;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.words {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.words p{
+    font-family: 'Mallanna';
+}
+img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
 }
