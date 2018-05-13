@@ -1,5 +1,4 @@
 AdvancedHTTPServer==2.0.10
-alembic==0.9.3.dev0
 apparmor==2.12
 asn1crypto==0.24.0
 beautifulsoup4==4.6.0
