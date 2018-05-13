@@ -7,14 +7,16 @@ sources_url = None
 articles_url = None
 topheadlines_url = None
 everything_url = None
+everything_search_url = None
 
 def configure_request(app):
-    global api_key, sources_url, articles_url, topheadlines_url, everything_url
+    global api_key, sources_url, articles_url, topheadlines_url, everything_url, everything_search_url
     api_key = app.config['NEWS_API_KEY']
     sources_url = app.config['SOURCES_BASE_URL']
     articles_url = app.config['EVERYTHING_SOURCE_BASE_URL']
     topheadlines_url = app.config['TOP_HEADLINES_BASE_URL']
     everything_url = app.config['EVERYTHING_BASE_URL']
+    everything_search_url = app.config['EVERYTHING_SEARCH_URL']
 
 
 def get_sources(category):
@@ -126,3 +128,19 @@ def everything(limit):
             everything_results = process_articles(everything_response['articles'])
         
     return everything_results
+
+def search_topheadlines(limit,query):
+    '''
+    Function that looks for articles based on top headlines
+    '''
+    search_everything_url = everything_search_url.format(query,limit,api_key)
+    with urllib.request.urlopen(search_everything_url) as url:
+        search_everything_data = url.read()
+        search_everything_response = json.loads(search_everything_data)
+
+        search_everything_results=[]
+
+        if search_everything_response['articles']:
+            search_everything_results = process_articles(search_everything_response['articles'])
+    
+    return search_everything_results

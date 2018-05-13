@@ -18,7 +18,7 @@
 #navMain .navbar-nav .nav-item:active,
 #navMain .navbar-nav .nav-item:focus {
     outline: none;
-    background-color: transparent;
+    background-color: rgb(240, 120, 120);
 }
 
 @media (min-width: 992px) {
@@ -37,6 +37,7 @@
     }
     #navMain .nav-link.active:hover {
         color: white;
+        background-color: rgba(230, 210, 97, 0.637)
     }
     #navMain.navbar-shrink {
         padding-top: 10px;
