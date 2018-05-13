@@ -59,7 +59,7 @@ pycountry==17.5.14
 pycrypto==2.6.1
 pycups==1.9.73
 pycurl==7.43.0.1
-pygobject==3.26.1
+# pygobject==3.26.1
 pyinotify==0.9.6
 PyOpenGL==3.1.0
 pyOpenSSL==17.5.0
