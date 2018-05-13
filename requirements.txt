@@ -1,6 +1,4 @@
 AdvancedHTTPServer==2.0.10
-apparmor==2.12
-asn1crypto==0.24.0
 beautifulsoup4==4.6.0
 binwalk==2.1.1
 blinker==1.4
