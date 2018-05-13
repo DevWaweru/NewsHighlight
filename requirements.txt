@@ -69,7 +69,7 @@ pyqtgraph==0.10.0
 pyserial==3.4
 pysmbc==1.0.15.6
 PySocks==1.6.5
-python-apt==1.4.0b3+b1
+# python-apt==1.4.0b3+b1
 python-dateutil==2.6.1
 python-debian==0.1.31
 python-debianbts==2.7.1
