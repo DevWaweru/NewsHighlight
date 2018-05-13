@@ -95,7 +95,7 @@ tabulate==0.7.7
 termcolor==1.1.0
 # termineter==1.0.1
 tzlocal==1.4
-unattended-upgrades==0.1
+# unattended-upgrades==0.1
 urllib3==1.22
 virtualenv==15.1.0
 visitor==0.1.3
