@@ -3,7 +3,7 @@
 
 {% block content%}
 <div class="container-fluid">
-    <div class="row">
+    <div class="row" id="top">
         <div class="col-md-12 heading">
             <h1>News Highlights</h1>
         </div>
@@ -16,49 +16,44 @@
         {{macro.sourceCategories(general)}}
     </div>
     <hr>
-    <div class="row">
+    <div class="row" id="business">
         <div class="col-md-12 categories">
-            <h2>Business News</h2>
+            <h2 >Business News</h2>
         </div>
         {{macro.sourceCategories(business)}}
     </div>
     <hr>
-    <div class="row">
+    <div class="row" id="entertainment">
         <div class="col-md-12 categories">
             <h2>Entertainment News</h2>
-            
         </div>
         {{macro.sourceCategories(entertainment)}}
     </div>
     <hr>
-    <div class="row">
-        <div class="col-md-12 categories">
-            <h2>Technology News</h2>
-            
-        </div>
-        {{macro.sourceCategories(tech)}}
-    </div>
-    <hr>
-    <div class="row">
-        <div class="col-md-12 categories">
-            <h2>Science News</h2>
-            
-        </div>
-        {{macro.sourceCategories(science)}}
-    </div>
-    <hr>
-    <div class="row">
+    <div class="row" id="sports">
         <div class="col-md-12 categories">
             <h2>Sports News</h2>
-            
         </div>
         {{macro.sourceCategories(sports)}}
     </div>
     <hr>
-    <div class="row">
+    <div class="row" id="tech">
+        <div class="col-md-12 categories">
+            <h2>Technology News</h2>
+        </div>
+        {{macro.sourceCategories(tech)}}
+    </div>
+    <hr>
+    <div class="row" id="science">
+        <div class="col-md-12 categories">
+            <h2>Science News</h2>
+        </div>
+        {{macro.sourceCategories(science)}}
+    </div>
+    <hr>
+    <div class="row" id="health">
         <div class="col-md-12 categories">
             <h2>Health News</h2>
-            
         </div>
         {{macro.sourceCategories(health)}}
     </div>

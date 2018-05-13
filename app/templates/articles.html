@@ -3,6 +3,11 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
+        <div class="col-md-12 heading">
+            <h1> {{name}} </h1>
+        </div>
+    </div>
+    <div class="row">
         {% for article in news %}
             <div class="col-md-3 articles-details">
                 <img src={{article.urlToImage}} alt="IMAGE LOADING...">

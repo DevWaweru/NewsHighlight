@@ -82,6 +82,7 @@ def process_articles(my_articles):
         date_published = article.get('publishedAt')
 
         publishedAt = datetime(year=int(date_published[0:4]),month=int(date_published[5:7]),day=int(date_published[8:10]),hour=int(date_published[11:13]),minute=int(date_published[14:16]))
+
         if urlToImage:
             article_source_object = Articles(author,title,description,url,urlToImage,publishedAt)
             article_location_list.append(article_source_object)

@@ -30,6 +30,5 @@ def articles(source_id):
     # print(source_id)
     per_page = 40
     news_source = get_articles(source_id,per_page)
-    title = f'{source_id} | All articles'
-    
-    return render_template('articles.html', title = title, news = news_source)
+    title = f'{source_id} | All Articles'
+    return render_template('articles.html', title = title, name = source_id, news = news_source)

@@ -41,7 +41,7 @@
     #navMain.navbar-shrink {
         padding-top: 10px;
         padding-bottom: 10px;
-        background: black;
+        background: #222;
         border-bottom: 1px solid red;
     }
     #navMain.navbar-shrink a{
@@ -51,17 +51,24 @@
 .heading {
     text-align: center;
     font-family: 'Allura';
+    background-color: #222;
 }
 
 h1 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
     font-size: 70px;
     word-wrap: break-word;
+    color: white
 }
 
 .categories {
     text-align: center;
+    margin-top: 2rem;
 }
-
+.categories h2{
+    font-family: 'Julius Sans One';    
+}
 .single-source {
     box-shadow: 2px 4px 12px 2px #DCDCDC;
     margin: 1rem;
@@ -72,18 +79,6 @@ h1 {
 
 .source-name {
     text-align: right;
-}
-
-h2,
-h3,{
-    font-family: 'Julius Sans One';
-    word-wrap: break-word;
-}
-h4{
-    font-family: 'Josefin Sans';
-}
-p{
-    word-wrap: break-word;
 }
 
 .source-details {
@@ -120,4 +115,14 @@ img:hover {
 }
 .small{
     margin-bottom: 0
+}
+h3{
+    font-family: 'Julius Sans One';
+    word-wrap: break-word;
+}
+h4{
+    font-family: 'Josefin Sans';
+}
+p{
+    word-wrap: break-word;
 }
