@@ -1,7 +1,7 @@
 from flask import render_template,redirect,url_for,request
 from . import main
 from ..models import Sources
-from ..request import get_sources, get_articles
+from ..request import get_sources, get_articles, topheadlines, everything
 
 @main.route('/')
 def index():
@@ -32,3 +32,23 @@ def articles(source_id):
     news_source = get_articles(source_id,per_page)
     title = f'{source_id} | All Articles'
     return render_template('articles.html', title = title, name = source_id, news = news_source)
+
+@main.route('/topheadlines')
+def headlines():
+    '''
+    Function that returns top headlines articles
+    '''
+    per_page = 40
+    topheadlines_news = topheadlines(per_page)
+    title = 'Top Headlines'
+    return render_template('topheadlines.html',title=title, name='Top Headlines' ,news=topheadlines_news)
+
+@main.route('/everything')
+def all_news():
+    '''
+    Function that returns top headlines articles
+    '''
+    per_page = 40
+    everything_news = everything(per_page)
+    title = 'All News'
+    return render_template('topheadlines.html',title=title, name='All News' ,news=everything_news)
