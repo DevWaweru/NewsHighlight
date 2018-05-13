@@ -51,7 +51,13 @@ def all_news():
     per_page = 40
     everything_news = everything(per_page)
     title = 'All News'
-    return render_template('topheadlines.html',title=title, name='All News' ,news=everything_news)
+    
+    search_articles = request.args.get('search_query')
+
+    if search_articles:
+        return redirect(url_for('main.search',topic=search_articles))
+    else:
+        return render_template('topheadlines.html', title=title, name='All News', news=everything_news)
 
 @main.route('/search/<topic>')
 def search(topic):

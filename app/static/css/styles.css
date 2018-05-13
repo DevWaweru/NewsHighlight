@@ -127,3 +127,6 @@ h4{
 p{
     word-wrap: break-word;
 }
+.heading #search{
+    margin-top: 25rem;
+}
