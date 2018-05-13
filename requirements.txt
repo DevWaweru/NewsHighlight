@@ -84,7 +84,7 @@ qrcode==5.3
 requests==2.18.4
 scipy==0.19.1
 SecretStorage==2.3.1
-setools==4.1.1
+# setools==4.1.1
 setproctitle==1.1.10
 simplejson==3.13.2
 six==1.11.0
