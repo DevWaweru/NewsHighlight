@@ -1,7 +1,7 @@
 from flask import render_template,redirect,url_for,request
 from . import main
 from ..models import Sources
-from ..request import get_sources, get_articles, topheadlines, everything
+from ..request import get_sources, get_articles, topheadlines, everything, search_everything
 
 @main.route('/')
 def index():
@@ -52,3 +52,17 @@ def all_news():
     everything_news = everything(per_page)
     title = 'All News'
     return render_template('topheadlines.html',title=title, name='All News' ,news=everything_news)
+
+@main.route('/search/<topic>')
+def search(topic):
+    '''
+    function that returns the results of search request
+    '''
+    limit = 40
+    search_name = topic.split(" ")
+    search_name_format = "+".join(search_name)
+    search_every = search_everything(limit,search_name_format)
+
+    title = '{search_name_format} Results'
+
+    return render_template('search.html',title=title,news = search_every)

@@ -129,7 +129,7 @@ def everything(limit):
         
     return everything_results
 
-def search_topheadlines(limit,query):
+def search_everything(limit,query):
     '''
     Function that looks for articles based on top headlines
     '''

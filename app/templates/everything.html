@@ -1,24 +1,29 @@
-{% extends 'base.html' %}
-
+{% extends 'base.html' %} 
 {% block content %}
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12 heading">
+            <form action="">
+                <input type="text" name="movie_query" placeholder="Search for a movie" class="form-control">
+                <input type="submit" value="submit" class="btn btn-warning">
+            </form>
             <h1> {{name}} </h1>
         </div>
     </div>
     <div class="row">
         {% for article in news %}
-            <div class="col-md-3 articles-details">
-                <img src={{article.urlToImage}} alt="IMAGE LOADING...">
-                <div class="words">
-                    <h4 class="text-bold"> {{article.title}} </h4>
-                    <p class="small">- {{article.author}} </p>
-                    <p class="small">Posted on {{article.publishedAt}}</p>
-                    <hr>
-                    <p> {{article.description}}...<a href={{article.url}} target="_blank">Read More</a> </p>                    
-                </div>
+        <div class="col-md-3 articles-details">
+            <img src={{article.urlToImage}} alt="IMAGE LOADING...">
+            <div class="words">
+                <h4 class="text-bold"> {{article.title}} </h4>
+                <p class="small">- {{article.author}} </p>
+                <p class="small">Posted on {{article.publishedAt}}</p>
+                <hr>
+                <p> {{article.description}}...
+                    <a href={{article.url}} target="_blank">Read More</a>
+                </p>
             </div>
+        </div>
         {% endfor %}
     </div>
 </div>
