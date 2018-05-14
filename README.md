@@ -1,4 +1,4 @@
-# NewsHighlight
+# [NewsHighlight](https://our-news.herokuapp.com/)
 ## News Highlight is a web application meant to catch up hard workers on the current affairs
 ### May 11th, 2018
 #### By **[Richard Waweru](https://github.com/devwaweru)**
@@ -7,6 +7,7 @@
 News Highlight is a web application that is meant to catch up hard workers on current affairs happening all over the world.
 The website has the home page, that has a list of all sources of news sorted in categories.
 A user will have to click on `Read More` on a specific source to view artciles on the site
+Click [here](https://our-news.herokuapp.com/) to see the live site
 
 ## Specifications
 | Behavior            | Input                         | Output                        | 
@@ -22,6 +23,7 @@ A user will have to click on `Read More` on a specific source to view artciles o
 
 ## Set-up and Installation
     - Clone the Repo
+    - Edit the start.sh file with your api key from the news.org website
     - Install python 3.6
     - Run chmod a+x start.py
     - Run ./start.py
