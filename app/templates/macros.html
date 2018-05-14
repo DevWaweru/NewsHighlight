@@ -8,10 +8,14 @@
         <div class="col-md-7 source-details">
             <p> {{category.description|truncate(150)}}
                 <br>
-                <a href="/articles/{{category.id}}">Read Articles</a>
+                <a href="/articles/{{category.id}}&40">Read Articles</a>
             </p>            
         </div>
     </div>
 </div>
 {% endfor %} 
 {% endmacro %}
+
+{% macro addMore() %}
+    
+{% endmacro%}
