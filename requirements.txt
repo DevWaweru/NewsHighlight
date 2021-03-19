@@ -26,7 +26,7 @@ idna==2.6
 # iotop==0.6
 iso8601==0.1.11
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 jsonrpclib-pelix==0.3.1
 keyring==10.6.0
 keyrings.alt==3.0
